@@ -1,0 +1,84 @@
+<div class="container" *ngIf="post">
+ <br /><br />
+ <h1>Add Blog</h1>
+ <br /><br />
+ <form #form="ngForm" (ngSubmit)="onSubmit()">
+   <div class="mb-3">
+     <label class="form-label">Title</label>
+     <input
+       type="text"
+       class="form-control"
+       name="Title"
+       [(ngModel)]="post.Title"
+     />
+   </div>
+   <div class="mb-3">
+     <label class="form-label">Content</label>
+     <textarea
+       class="form-control"
+       name="Content"
+       [(ngModel)]="post.Content"
+     ></textarea>
+   </div>
+   <div class="mb-3">
+     <label class="form-label">Summary</label>
+     <textarea
+       class="form-control"
+       name="Summary"
+       [(ngModel)]="post.Summary"
+     ></textarea>
+   </div>
+   <div class="mb-3">
+     <label class="form-label">UrlHandle</label>
+     <input
+       type="text"
+       class="form-control"
+       name="UrlHandle"
+       [(ngModel)]="post.UrlHandle"
+     />
+   </div>
+   <div class="form-check, mb-3">
+    <input type="checkbox" class="form-check-input" name="Visible" [(ngModel)]="post.Visible">
+    <label class="form-check-label1">Visible</label>
+   </div>
+   <div class="mb-3">
+     <label class="form-label">Author</label>
+     <input
+       type="text"
+       class="form-control"
+       name="Author"
+       [(ngModel)]="post.Author"
+     />
+   </div>
+   <div class="mb-3">
+     <label class="form-label">PublishDate</label>
+     <input
+       type="datetime"
+       class="form-control"
+       name="PublishDate"
+       [(ngModel)]="post.PublishDate"
+     />
+   </div>
+   <div class="mb-3">
+     <label class="form-label">UpdatedDate</label>
+     <input
+       type="datetime"
+       class="form-control"
+       name="UpdatedDate"
+       [(ngModel)]="post.UpdatedDate"
+     />
+   </div>
+   <div class="mb-3">
+     <label class="form-label">FeaturedImageUrl</label>
+     <input
+       type="text"
+       class="form-control"
+       name="FeaturedImageUrl"
+       [(ngModel)]="post.FeaturedImageUrl"
+     />
+   </div>
+   <div class="mb-3">
+    <button class="btn btn-primary">Save</button>
+   </div>
+ </form>
+</div>
